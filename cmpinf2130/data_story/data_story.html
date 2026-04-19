@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fentanyl's Grip on Allegheny County | 2007–2025</title>
+  <title>Fentanyl Overdose Deaths in Allegheny County, Pennsylvania | 2007–2025</title>
   <style>
     body {
       font-family: 'Segoe UI', Arial, sans-serif;
@@ -43,6 +43,12 @@
       border-bottom: 4px solid #00b894;
       padding-bottom: 12px;
     }
+    .chart-title {
+      font-size: 1.35rem;
+      margin: 0 0 12px 0;
+      color: #2c3e50;
+      text-align: left;
+    }
     .viz-container {
       margin: 25px 0 12px 0;
       text-align: center;
@@ -56,6 +62,7 @@
     }
     .caption {
       margin-top: 15px;
+      margin-bottom: 40px;
       font-style: italic;
       color: #555;
       font-size: 1.05em;
@@ -80,22 +87,28 @@
   <div class="container">
 
     <header>
-      <h1>Fentanyl's Grip on Allegheny County</h1>
-      <p class="subtitle">A Preventable Public Health Crisis (2007–2025)</p>
+      <h1>Fentanyl Overdose Deaths in Allegheny County, Pennsylvania</h1>
+      <p class="subtitle">Trends, Geographic Spread, and Unequal Impact (2007–2025)</p>
+      <p style="margin-top: 15px; font-size: 1.1em; opacity: 0.9;">by Robert</p>
+      <p style="margin-top: 15px; font-size: 1.1em; opacity: 0.9;">Created: April 19, 2026</p>
+
     </header>
 
     <section>
       <h2>0. Introduction</h2>
       <div class="body">
         <p>
-          Between 2014 and 2025, Allegheny County experienced a dramatic surge in fatal drug overdoses, driven almost entirely by fentanyl.  What began as a crisis involving heroin and prescription opioid quickly evolved into a more deadly epidemic once fentanyl entered the local drug supply.
+          Between 2014 and 2025, Allegheny County, Pennsylvania, experienced a dramatic surge in fatal drug overdoses, driven almost entirely by fentanyl.  What began as a crisis involving heroin and prescription opioids quickly evolved into a far deadlier epidemic once fentanyl entered the local drug supply.
         </p>
         <p>
-          This data story examines the epidemic though three perspectives: 
+          This data story is designed for Allegheny County residents, public health officials, and policymakers. Its purpose is to reveal how fentanyl has transformed the overdose crisis and to advocate for expanded, equitable harm reduction efforts that can prevent future deaths.
+        </p>
+        <p>
+          This story examines the epidemic through three perspectives: 
           <ul>
-            <li><strong>When and what</strong> happened.</li>
-            <li><strong>Where</strong> it spread.</li>
-            <li><strong>Who</strong> has been impacted.</li>
+            <li><strong>When and what</strong> happened: the explosive rise of fentanyl.</li>
+            <li><strong>Where</strong> the deaths spread geographically.</li>
+            <li><strong>Who</strong> has been impacted, including racial disparities.</li>
           </ul>
         </p>
       </div>
@@ -107,19 +120,22 @@
 
       <!-- Tell -->
       <p>
-        From 2007 to 2013, fentanyl (including analogs) was a relatively minor contributor to overdose deaths in Allegheny County.
-        The situation changed dramatically in 2014, when fentanyl entered the top five drugs.  Within just two years, it had overtaken every other substance to become the leading cause of fatal overdoses.
+        From 2007 to 2013, fentanyl (including analogs) was a relatively minor contributor to overdose deaths in Allegheny County.  Starting in 2014, the situation changed dramatically: fentanyl quickly entered the top five drugs and within just two years, overtook every other substance to become the leading cause of fatal overdoses.
       </p>
       <p>
-        Between 2016 to 2020, deaths involving other drugs declined significantly, while fentanyl-related deaths continued to rise.
-        Fentanyl reached its peak in 2021, accounting for more deaths than all other drugs combined.
-        After the peak, fentanyl deaths fell back toward 2016 levels.  In 2024, fentanyl caused roughly the same number of deaths as cocaine, yet it remains the single leading cause of drug overdose deaths in the county.
+        As shown in the chart below, deaths involving other drugs declined significantly after 2016, while fentanyl-related deaths continued to climb, peaking in 2021 (accounting for more deaths than all other drugs combined).  Although numbers have since fallen toward 2016 levels, fentanyl remains the single leading cause of drug overdose deaths in the county as of 2024.
+      </p>
+      <!-- Cite -->
+      <p>
+        Data for this story come from the <a href="https://data.wprdc.org/dataset/allegheny-county-fatal-accidental-overdoses" target="_blank" style="color: #00b894;">Allegheny County Fatal Accidental Overdoses Dataset</a> (Western Pennsylvania Regional Data Center). Overdose records from 2007-2025 were cleaned and analyzed in Python using pandas and geopandas.  Visualizations were created with matplotlib and seaborn. Population-adjusted rates were calculated using <a href="https://www.census.gov/programs-surveys/acs/news/data-releases.2023.html" target="_blank" style="color: #00b894;">U.S. Census Bureau American Community Survey (ACS) 2019–2023 5-Year Estimates</a>.
       </p>
       <!-- Show -->
       <div class="viz-container">
+        <h3 class="chart-title">Fentanyl Rapidly Overtook All Other Drugs as the Leading Cause of Overdose Deaths in Allegheny County (2007–2025)</h3>
+
         <img src="https://raw.githubusercontent.com/rgaden/Pitt/main/cmpinf2130/data_story/visualizations/chart1_overdose_deaths_vs_time_by_drug.png" alt="Overdose deaths by drug over time in Allegheny County">
         <!-- Explain -->
-        <p class="caption">Fentanyl (including analogs) has rapidly became the leading cause of fatal overdose in Allegheny County.</p>
+        <p class="caption">Fentanyl (including analogs) rapidly became the leading cause of fatal overdoses after 2014, peaking in 2021.</p>
       </div>
     </section>
 
@@ -132,13 +148,15 @@
         From 2007 to 2013, fentanyl-related deaths were rare and sporadically scattered across only a few isolated areas of Allegheny County.
       </p>
       <p>
-        Starting in 2014, the first clear signs emerged that fentanyl had entered the local drug supply network.  What followed was a rapid geographic expansion.  The animation shows how fentanyl deaths spread in waves, with intense hotspots forming and intensifying over time, particularly in neighborhoods on Pittsburgh’s South Side, North Side, and South Hills.
+        Starting in 2014, clear signs emerged that fentanyl had entered the local drug supply.  The animation below shows the rapid geographic expansion that followed, with deaths spreading in waves and intense hotspots forming, particularly in neighborhoods on Pittsburgh’s South Side, North Side, and South Hills.
       </p>
       <!-- Show -->
       <div class="viz-container">
+        <h3 class="chart-title">Fentanyl Overdose Deaths Spread Quickly from Isolated Areas into Major Hotspots Across Allegheny County (2007–2025)</h3>
+
         <img src="https://raw.githubusercontent.com/rgaden/Pitt/main/cmpinf2130/data_story/visualizations/chart2_fentanyl_broad_definition_animated.gif" alt="Animated map of fentanyl deaths by zip code over time">
         <!-- Explain -->
-        <p class="caption">Fentanyl a relatively nonextant problem rapidly began to spread and intensified across many parts of Allegheny County, hitting certain neighborhoods particularly hard.</p>
+        <p class="caption">Fentanyl, once a relatively nonexistent problem, rapidly spread and intensified across Allegheny County, hitting certain neighborhoods particularly hard.</p>
       </div>
     </section>
 
@@ -151,10 +169,12 @@
         White residents account for the largest number of fentanyl-related deaths across all age groups, largely due to their larger share of the population.
       </p>
       <p>
-        However, when adjusted for population size, Black residents experience significantly higher rates than White residents in nearly every age group.  The disparity is especially pronounced among working age adults (45–65+ years old), where Black residents death rates are two to three times higher than White residents in several age groups.
+        However, when adjusted for population size, Black residents experience significantly higher death rates than White residents in nearly every age group.  The disparity is especially pronounced among working-age adults (45–65+), where Black residents' death rates are often two to three times higher than those of White residents.
       </p>
       <!-- Show -->
       <div class="viz-container">
+        <h3 class="chart-title">Racial Disparities in Fentanyl Overdose Deaths: High Absolute Counts for White Residents, Much Higher Rates for Black Residents</h3>
+
         <img src="https://raw.githubusercontent.com/rgaden/Pitt/main/cmpinf2130/data_story/visualizations/chart3_combined_fentanyl_counts_vs_rates.png" alt="Raw counts vs death rates by race and age">
         <!-- Explain -->
         <p class="caption">
@@ -179,7 +199,7 @@
       <a href="https://data.wprdc.org/dataset/allegheny-county-fatal-accidental-overdoses" target="_blank" style="color: #00b894;">
       Allegheny County Fatal Accidental Overdoses Dataset (WPRDC)</a><br>
       <a href="https://www.census.gov/programs-surveys/acs/news/data-releases.2023.html" target="_blank" style="color: #00b894;">
-      Population denominators: U.S. Census Bureau American Community Survey (ACS) 2019–2023 5-Year Estimates</a><br><br>
+      U.S. Census Bureau American Community Survey (ACS) 2019–2023 5-Year Estimates</a><br><br>
       Fentanyl and fentanyl analogs are included, with the exception of 4-ANPP and Despropionyl (consistent methodology)
     </footer>
 
